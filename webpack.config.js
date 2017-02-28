@@ -7,10 +7,16 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 
-  entry: ["babel-polyfill", "./src/js/app.js"],
+  context: __dirname + '/src/js',
+
+  entry: {
+    home: ["babel-polyfill", "./app.js"],
+    about: ["babel-polyfill", "./script_2.js" ]
+  },
   output: {
-   filename: './dist/js/dist.js',
-   library: 'data'
+    path: 'dist/js',
+   filename: "[name].js",
+   library: "[name]"
  },
 
  resolve: {
@@ -38,9 +44,14 @@ module: {
 },
 
 plugins: [
+
+new webpack.optimize.CommonsChunkPlugin({
+  name: "common"
+}),
+
 new JavaScriptObfuscator({
   rotateUnicodeArray: true
-}, ['dist.js']),
+}, ['home.js', 'about.js', 'common.js']),
 
 new UglifyJSPlugin()
 ]

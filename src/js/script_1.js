@@ -1,6 +1,6 @@
 'use strict';
 
-let data = [
+let info = [
   {
     "guid": "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
     "index": 0,
@@ -276,4 +276,4 @@ let data = [
   }
 ];
 
-module.exports = data;
+module.exports = info;

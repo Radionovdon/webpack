@@ -1,0 +1,1 @@
+var about=webpackJsonp_name_([1],{116:function(n,o,t){"use strict";t(45);var e=function(){alert("Hello")};e(),o.hello=e},302:function(n,o,t){t(45),n.exports=t(116)}},[302]);

@@ -1,8 +1,8 @@
 'use strict';
 
 require("babel-polyfill");
-let data = require('./script_1.js')
+let information = require('./script_1.js')
 
-console.log(data);
+console.log(information);
 
-exports.data = data;
+exports.information = information;
